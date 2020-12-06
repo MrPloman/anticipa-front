@@ -1,0 +1,20 @@
+<app-loader
+  class="animate__animated animate__fadeIn"
+  *ngIf="loading"
+></app-loader>
+<div class="store">
+  <div class="store-header">
+    <img
+      class="store-header-image"
+      src="../../../assets/icons/logo_holapisos.png"
+      alt="logo"
+    />
+    <h1 class="store-header-title">Prueba Técnica De Pol Plana</h1>
+  </div>
+  <div class="store-list">
+    <app-list [places]="places"></app-list>
+  </div>
+  <div class="store-pagination" *ngIf="!disableButton && !loading">
+    <app-pagination (emitNext)="getEmit($event)"></app-pagination>
+  </div>
+</div>

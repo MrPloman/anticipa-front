@@ -1,0 +1,57 @@
+.store {
+  z-index: 10;
+  &-header {
+    height: 200px;
+    margin: 0 auto;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    &-image {
+      width: 170px;
+      max-height: 100px;
+    }
+    &-title {
+      font-size: 30px;
+      color: rgb(19, 63, 129);
+      text-align: right;
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &-pagination {
+    margin: 0 auto;
+    width: 50vw;
+  }
+}
+app-loader {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  background-color: rgba(255, 255, 255, 0.212);
+  overflow-y: unset;
+  z-index: 20;
+}
+@media (max-width: 650px) {
+  .store {
+    &-header {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      &-title {
+        text-align: center;
+        font-size: 25px;
+      }
+      &-image {
+        width: 150px;
+        max-height: 80px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

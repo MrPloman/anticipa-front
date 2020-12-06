@@ -1,0 +1,25 @@
+<div class="card animate__animated animate__fadeIn">
+  <div class="card-header">
+    <img [src]="place.images[0]" [alt]="place.name" (error)="imageError()" />
+    <div *ngIf="place.type !== ''" class="card-header-type">
+      {{ place.type | titlecase }}
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-body-element">
+      <!--       <div class="card-body-element-label">
+        <h6>Name:</h6>
+      </div> -->
+      <div class="card-body-element-name">
+        <h5>{{ place.street | titlecase }} {{ place.name | titlecase }}</h5>
+        <h6>{{ place.location | titlecase }}</h6>
+      </div>
+    </div>
+    <div class="card-body-element">
+      <!--  <div class="card-body-element-label"><h6>Precio:</h6></div> -->
+      <div class="card-body-element-price">
+        <h5>{{ place.price }}€</h5>
+      </div>
+    </div>
+  </div>
+</div>
